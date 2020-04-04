@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Stroke Prediction</title>
+ 
+</head>
+
+<body>
+  
+    <div class="login">    
+    <h3>TAVALE</h3>
+    <h4>STROKE PREDICTION </h4>
+      <form action="{{ url_for('predict')}}" method="post">
+       <input type="text" name="smoking_status" placeholder=" Enter 0 for 'formerly smoked', 1 for'never smoked' and 2 for 'smokes'" required="required" />
+		<input type="text" name="Hyper Tension History" placeholder=" Enter 1 if you have hypertension OR 0 if not" required="required" />
+        <input type="text" name="Heart Disease History" placeholder=" Enter 1 if you have hear disease history OR 0 if not" required="required" />
+      <input type="text" name="Age" placeholder=" Enter your age" required="required" />
+      <input type="text" name="BMI" placeholder=" Enter your bmi" required="required" />      
+     <br>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+    <br>
+    {{prediction_text}}
+    <br>
+    
+  </div>
+  
+</body>
+
+</html>
